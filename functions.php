@@ -26,14 +26,14 @@ add_theme_support( 'custom-background' );
 add_theme_support( 'genesis-footer-widgets', 3 );
 
 //* Enqueue assets
-
+add_action( 'wp_enqueue_scripts', 'gene_add_header_assets' );
 function gene_add_header_assets() {
   wp_enqueue_script( 'modernizr', get_stylesheet_directory_uri().'/js/vendor/custom.modernizr.js' );
   wp_enqueue_script( 'jquery' );
   wp_enqueue_script( 'foundation', get_stylesheet_directory_uri().'/js/foundation.min.js', array('jquery') );
   // wp_enqueue_style('header-styles', get_stylesheet_directory_uri().'/reveal/reveal.css');
+  wp_enqueue_script( 'myapp', get_stylesheet_directory_uri().'/js/app.js', array('jquery'), '', true );
 }
-add_action( 'wp_enqueue_scripts', 'gene_add_header_assets' );
 
 //* Init ZURB Foundation Framework
 
