@@ -3,7 +3,6 @@
 # require "zurb-foundation"
 
 # require "modular-scale"
-# 
 # # gumby_extensions_dir = "assets/sass/gumby/extensions"
 # # Compass::Frameworks.register('modular-scale', :path => File.expand_path("#{extensions_dir}/modular-scale"))
 
