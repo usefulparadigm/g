@@ -1,0 +1,1939 @@
+/*
+	Theme Name: Gene
+	Description: This is the sample theme created for the Genesis Framework.
+	Author: Useful Paradgim
+	Author URI: http://www.usefulparadigm.com/
+	Version: 0.1.0
+ 
+	Tags: black, orange, white, one-column, two-columns, three-columns, fixed-width, custom-menu, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready
+ 
+	Template: genesis
+	Template Version: 2.0.1
+ 
+	License: GPL-2.0+
+	License URI: http://www.opensource.org/licenses/gpl-license.php
+*/
+/*
+  Styles from Genesis sample theme
+*/
+/* Table of Contents
+
+	- HTML5 Reset
+		- Baseline Normalize
+		- Box Sizing
+		- Float Clearing
+	- Defaults
+		- Typographical Elements
+		- Headings
+		- Objects
+		- Forms
+		- Tables
+	- Structure and Layout
+		- Site Containers
+		- Column Widths and Positions
+		- Column Classes
+	- Common Classes
+		- WordPress
+		- Genesis
+		- Titles
+	- Widgets
+		- Featured Content
+	- Plugins
+		- Genesis eNews Extended
+		- Genesis Latest Tweets
+		- Gravity Forms
+		- Jetpack
+	- Site Header
+		- Title Area
+		- Widget Area
+	- Site Navigation
+		- Header Navigation
+		- Primary Navigation
+		- Secondary Navigation
+	- Content Area
+		- Entries
+		- Pagination
+		- Comments
+	- Sidebars
+	- Footer Widgets
+	- Site Footer
+	- Media Queries
+		- max-width: 1139px
+		- max-width: 1023px
+		- max-width: 767px
+
+*/
+/*
+HTML5 Reset
+---------------------------------------------------------------------------------------------------- */
+/* Baseline Normalize
+	normalize.css v2.1.2 | MIT License | git.io/normalize
+--------------------------------------------- */
+/* line 62, assets/sass/_genesis.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+  display: block;
+}
+
+/* line 62, assets/sass/_genesis.scss */
+audio, canvas, video {
+  display: inline-block;
+}
+
+/* line 62, assets/sass/_genesis.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/* line 62, assets/sass/_genesis.scss */
+[hidden] {
+  display: none;
+}
+
+/* line 62, assets/sass/_genesis.scss */
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* line 62, assets/sass/_genesis.scss */
+body {
+  margin: 0;
+}
+
+/* line 62, assets/sass/_genesis.scss */
+a:focus {
+  outline: thin dotted;
+}
+
+/* line 62, assets/sass/_genesis.scss */
+a:active, a:hover {
+  outline: 0;
+}
+
+/* line 62, assets/sass/_genesis.scss */
+h1 {
+  font-size: 2em;
+  margin: .67em 0;
+}
+
+/* line 62, assets/sass/_genesis.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/* line 62, assets/sass/_genesis.scss */
+b, strong {
+  font-weight: bold;
+}
+
+/* line 62, assets/sass/_genesis.scss */
+dfn {
+  font-style: italic;
+}
+
+/* line 62, assets/sass/_genesis.scss */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/* line 62, assets/sass/_genesis.scss */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/* line 62, assets/sass/_genesis.scss */
+code, kbd, pre, samp {
+  font-family: monospace,serif;
+  font-size: 1em;
+}
+
+/* line 62, assets/sass/_genesis.scss */
+pre {
+  white-space: pre-wrap;
+}
+
+/* line 62, assets/sass/_genesis.scss */
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+/* line 62, assets/sass/_genesis.scss */
+small {
+  font-size: 80%;
+}
+
+/* line 62, assets/sass/_genesis.scss */
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 62, assets/sass/_genesis.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 62, assets/sass/_genesis.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* line 62, assets/sass/_genesis.scss */
+img {
+  border: 0;
+}
+
+/* line 62, assets/sass/_genesis.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* line 62, assets/sass/_genesis.scss */
+figure {
+  margin: 0;
+}
+
+/* line 62, assets/sass/_genesis.scss */
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: .35em .625em .75em;
+}
+
+/* line 62, assets/sass/_genesis.scss */
+legend {
+  border: 0;
+  padding: 0;
+}
+
+/* line 62, assets/sass/_genesis.scss */
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+}
+
+/* line 62, assets/sass/_genesis.scss */
+button, input {
+  line-height: normal;
+}
+
+/* line 62, assets/sass/_genesis.scss */
+button, select {
+  text-transform: none;
+}
+
+/* line 62, assets/sass/_genesis.scss */
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+/* line 62, assets/sass/_genesis.scss */
+button[disabled], html input[disabled] {
+  cursor: default;
+}
+
+/* line 62, assets/sass/_genesis.scss */
+input[type="checkbox"], input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+/* line 62, assets/sass/_genesis.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+/* line 62, assets/sass/_genesis.scss */
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/* line 62, assets/sass/_genesis.scss */
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* line 62, assets/sass/_genesis.scss */
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+/* line 62, assets/sass/_genesis.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Box Sizing
+--------------------------------------------- */
+/* line 68, assets/sass/_genesis.scss */
+*,
+input[type="search"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* Float Clearing
+--------------------------------------------- */
+/* line 88, assets/sass/_genesis.scss */
+.archive-pagination:before,
+.clearfix:before,
+.entry:before,
+.entry-pagination:before,
+.footer-widgets:before,
+.nav-primary:before,
+.nav-secondary:before,
+.site-container:before,
+.site-footer:before,
+.site-header:before,
+.site-inner:before,
+.wrap:before {
+  content: " ";
+  display: table;
+}
+
+/* line 104, assets/sass/_genesis.scss */
+.archive-pagination:after,
+.clearfix:after,
+.entry:after,
+.entry-pagination:after,
+.footer-widgets:after,
+.nav-primary:after,
+.nav-secondary:after,
+.site-container:after,
+.site-footer:after,
+.site-header:after,
+.site-inner:after,
+.wrap:after {
+  clear: both;
+  content: " ";
+  display: table;
+}
+
+/*
+Defaults
+---------------------------------------------------------------------------------------------------- */
+/* Typographical Elements
+--------------------------------------------- */
+/* line 118, assets/sass/_genesis.scss */
+html {
+  font-size: 62.5%;
+  /* 10px browser default */
+}
+
+/* line 122, assets/sass/_genesis.scss */
+body {
+  background-color: #f5f5f5;
+  color: #666;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 1.625;
+}
+
+/* line 139, assets/sass/_genesis.scss */
+a,
+button,
+input:focus,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+textarea:focus,
+.button {
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -ms-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+/* line 147, assets/sass/_genesis.scss */
+::-moz-selection {
+  background-color: #333;
+  color: #fff;
+}
+
+/* line 152, assets/sass/_genesis.scss */
+::selection {
+  background-color: #333;
+  color: #fff;
+}
+
+/* line 157, assets/sass/_genesis.scss */
+a {
+  color: #666;
+  text-decoration: none;
+}
+
+/* line 162, assets/sass/_genesis.scss */
+a img {
+  margin-bottom: -4px;
+  margin-bottom: -0.4rem;
+}
+
+/* line 167, assets/sass/_genesis.scss */
+a:hover {
+  color: #333;
+}
+
+/* line 171, assets/sass/_genesis.scss */
+p {
+  margin: 0 0 24px;
+  margin: 0 0 2.4rem;
+  padding: 0;
+}
+
+/* line 177, assets/sass/_genesis.scss */
+strong {
+  font-weight: 700;
+}
+
+/* line 182, assets/sass/_genesis.scss */
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 188, assets/sass/_genesis.scss */
+blockquote,
+blockquote::before {
+  color: #999;
+}
+
+/* line 192, assets/sass/_genesis.scss */
+blockquote {
+  margin: 40px 40px 24px;
+  margin: 4rem 4rem 2.4rem;
+}
+
+/* line 197, assets/sass/_genesis.scss */
+blockquote::before {
+  content: "\201C";
+  display: block;
+  font-size: 30px;
+  font-size: 3rem;
+  height: 0;
+  left: -20px;
+  position: relative;
+  top: -10px;
+}
+
+/* line 208, assets/sass/_genesis.scss */
+.entry-content code {
+  background-color: #333;
+  color: #ddd;
+}
+
+/* line 213, assets/sass/_genesis.scss */
+cite {
+  font-style: normal;
+}
+
+/* Headings
+--------------------------------------------- */
+/* line 225, assets/sass/_genesis.scss */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #333;
+  font-family: Lato, sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 16px;
+  margin: 0 0 1.6rem;
+}
+
+/* line 234, assets/sass/_genesis.scss */
+h1 {
+  font-size: 36px;
+  font-size: 3.6rem;
+}
+
+/* line 239, assets/sass/_genesis.scss */
+h2 {
+  font-size: 30px;
+  font-size: 3rem;
+}
+
+/* line 244, assets/sass/_genesis.scss */
+h3 {
+  font-size: 24px;
+  font-size: 2.4rem;
+}
+
+/* line 249, assets/sass/_genesis.scss */
+h4 {
+  font-size: 20px;
+  font-size: 2rem;
+}
+
+/* line 254, assets/sass/_genesis.scss */
+h5 {
+  font-size: 18px;
+  font-size: 1.8rem;
+}
+
+/* line 259, assets/sass/_genesis.scss */
+h6 {
+  font-size: 16px;
+  font-size: 1.6rem;
+}
+
+/* Objects
+--------------------------------------------- */
+/* line 272, assets/sass/_genesis.scss */
+embed,
+iframe,
+img,
+object,
+video,
+.wp-caption {
+  max-width: 100%;
+}
+
+/* line 276, assets/sass/_genesis.scss */
+img {
+  height: auto;
+  width: auto;
+  /* IE8 */
+}
+
+/* Forms
+--------------------------------------------- */
+/* line 286, assets/sass/_genesis.scss */
+input,
+select,
+textarea {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  box-shadow: 1px 1px 3px #eee inset;
+  color: #999;
+  font-size: 14px;
+  font-size: 1.4rem;
+  padding: 16px;
+  padding: 1.6rem;
+  width: 100%;
+}
+
+/* line 300, assets/sass/_genesis.scss */
+input:focus,
+textarea:focus {
+  border: 1px solid #999;
+  outline: none;
+}
+
+/* line 305, assets/sass/_genesis.scss */
+::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+
+/* line 310, assets/sass/_genesis.scss */
+::-webkit-input-placeholder {
+  color: #999;
+}
+
+/* line 319, assets/sass/_genesis.scss */
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+.button,
+.entry-content .button {
+  background-color: #333;
+  border: none;
+  box-shadow: none;
+  color: #fff;
+  cursor: pointer;
+  padding: 16px 24px;
+  padding: 1.6rem 2.4rem;
+  text-transform: uppercase;
+  width: auto;
+}
+
+/* line 336, assets/sass/_genesis.scss */
+button:hover,
+input:hover[type="button"],
+input:hover[type="reset"],
+input:hover[type="submit"],
+.button:hover,
+.entry-content .button:hover {
+  background-color: #f15123;
+}
+
+/* line 340, assets/sass/_genesis.scss */
+.entry-content .button:hover {
+  color: #fff;
+}
+
+/* line 344, assets/sass/_genesis.scss */
+.button {
+  border-radius: 3px;
+  display: inline-block;
+}
+
+/* line 350, assets/sass/_genesis.scss */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button {
+  display: none;
+}
+
+/* Tables
+--------------------------------------------- */
+/* line 357, assets/sass/_genesis.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  line-height: 2;
+  margin-bottom: 40px;
+  margin-bottom: 4rem;
+  width: 100%;
+}
+
+/* line 366, assets/sass/_genesis.scss */
+tbody {
+  border-bottom: 1px solid #ddd;
+}
+
+/* line 371, assets/sass/_genesis.scss */
+th,
+td {
+  text-align: left;
+}
+
+/* line 375, assets/sass/_genesis.scss */
+th {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* line 380, assets/sass/_genesis.scss */
+td {
+  border-top: 1px solid #ddd;
+  padding: 6px 0;
+  padding: 0.6rem 0;
+}
+
+/*
+Structure and Layout
+---------------------------------------------------------------------------------------------------- */
+/* Site Containers
+--------------------------------------------- */
+/* line 395, assets/sass/_genesis.scss */
+.site-inner,
+.wrap {
+  margin: 0 auto;
+  max-width: 1140px;
+}
+
+/* line 400, assets/sass/_genesis.scss */
+.site-inner {
+  clear: both;
+  padding-top: 40px;
+  padding-top: 4rem;
+}
+
+/* Column Widths and Positions
+--------------------------------------------- */
+/* Wrapping div for .content and .sidebar-primary */
+/* line 413, assets/sass/_genesis.scss */
+.content-sidebar-sidebar .content-sidebar-wrap,
+.sidebar-content-sidebar .content-sidebar-wrap,
+.sidebar-sidebar-content .content-sidebar-wrap {
+  width: 920px;
+}
+
+/* line 417, assets/sass/_genesis.scss */
+.content-sidebar-sidebar .content-sidebar-wrap {
+  float: left;
+}
+
+/* line 422, assets/sass/_genesis.scss */
+.sidebar-content-sidebar .content-sidebar-wrap,
+.sidebar-sidebar-content .content-sidebar-wrap {
+  float: right;
+}
+
+/* Content */
+/* line 428, assets/sass/_genesis.scss */
+.content {
+  float: right;
+  width: 740px;
+}
+
+/* line 435, assets/sass/_genesis.scss */
+.content-sidebar .content,
+.content-sidebar-sidebar .content,
+.sidebar-content-sidebar .content {
+  float: left;
+}
+
+/* line 441, assets/sass/_genesis.scss */
+.content-sidebar-sidebar .content,
+.sidebar-content-sidebar .content,
+.sidebar-sidebar-content .content {
+  width: 520px;
+}
+
+/* line 445, assets/sass/_genesis.scss */
+.full-width-content .content {
+  width: 100%;
+}
+
+/* Primary Sidebar */
+/* line 451, assets/sass/_genesis.scss */
+.sidebar-primary {
+  float: right;
+  width: 360px;
+}
+
+/* line 457, assets/sass/_genesis.scss */
+.sidebar-content .sidebar-primary,
+.sidebar-sidebar-content .sidebar-primary {
+  float: left;
+}
+
+/* Secondary Sidebar */
+/* line 463, assets/sass/_genesis.scss */
+.sidebar-secondary {
+  float: left;
+  width: 180px;
+}
+
+/* line 468, assets/sass/_genesis.scss */
+.content-sidebar-sidebar .sidebar-secondary {
+  float: right;
+}
+
+/* Column Classes
+	Link: http://twitter.github.io/bootstrap/assets/css/bootstrap-responsive.css
+--------------------------------------------- */
+/* line 486, assets/sass/_genesis.scss */
+.five-sixths,
+.four-sixths,
+.one-fourth,
+.one-half,
+.one-sixth,
+.one-third,
+.three-fourths,
+.three-sixths,
+.two-fourths,
+.two-sixths,
+.two-thirds {
+  float: left;
+  margin-left: 2.564102564102564%;
+}
+
+/* line 493, assets/sass/_genesis.scss */
+.one-half,
+.three-sixths,
+.two-fourths {
+  width: 48.717948717948715%;
+}
+
+/* line 498, assets/sass/_genesis.scss */
+.one-third,
+.two-sixths {
+  width: 31.623931623931625%;
+}
+
+/* line 503, assets/sass/_genesis.scss */
+.four-sixths,
+.two-thirds {
+  width: 65.81196581196582%;
+}
+
+/* line 507, assets/sass/_genesis.scss */
+.one-fourth {
+  width: 23.076923076923077%;
+}
+
+/* line 511, assets/sass/_genesis.scss */
+.three-fourths {
+  width: 74.35897435897436%;
+}
+
+/* line 515, assets/sass/_genesis.scss */
+.one-sixth {
+  width: 14.52991452991453%;
+}
+
+/* line 519, assets/sass/_genesis.scss */
+.five-sixths {
+  width: 82.90598290598291%;
+}
+
+/* line 523, assets/sass/_genesis.scss */
+.first {
+  clear: both;
+  margin-left: 0;
+}
+
+/*
+Common Classes
+---------------------------------------------------------------------------------------------------- */
+/* WordPress
+--------------------------------------------- */
+/* line 536, assets/sass/_genesis.scss */
+.avatar {
+  float: left;
+}
+
+/* line 540, assets/sass/_genesis.scss */
+.alignleft .avatar {
+  margin-right: 24px;
+  margin-right: 2.4rem;
+}
+
+/* line 545, assets/sass/_genesis.scss */
+.alignright .avatar {
+  margin-left: 24px;
+  margin-left: 2.4rem;
+}
+
+/* line 550, assets/sass/_genesis.scss */
+.search-form input[type="submit"] {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/* line 564, assets/sass/_genesis.scss */
+img.centered,
+.aligncenter {
+  display: block;
+  margin: 0 auto 24px;
+  margin: 0 auto 2.4rem;
+}
+
+/* line 570, assets/sass/_genesis.scss */
+img.alignnone {
+  margin-bottom: 12px;
+  margin-bottom: 1.2rem;
+}
+
+/* line 575, assets/sass/_genesis.scss */
+.alignleft {
+  float: left;
+  text-align: left;
+}
+
+/* line 580, assets/sass/_genesis.scss */
+.alignright {
+  float: right;
+  text-align: right;
+}
+
+/* line 586, assets/sass/_genesis.scss */
+img.alignleft,
+.wp-caption.alignleft {
+  margin: 0 24px 24px 0;
+  margin: 0 2.4rem 2.4rem 0;
+}
+
+/* line 592, assets/sass/_genesis.scss */
+img.alignright,
+.wp-caption.alignright {
+  margin: 0 0 24px 24px;
+  margin: 0 0 2.4rem 2.4rem;
+}
+
+/* line 597, assets/sass/_genesis.scss */
+.wp-caption-text {
+  font-size: 14px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* line 607, assets/sass/_genesis.scss */
+.widget_calendar table {
+  width: 100%;
+}
+
+/* line 612, assets/sass/_genesis.scss */
+.widget_calendar td,
+.widget_calendar th {
+  text-align: center;
+}
+
+/* Genesis
+--------------------------------------------- */
+/* line 619, assets/sass/_genesis.scss */
+.breadcrumb {
+  margin-bottom: 20px;
+  margin-bottom: 2rem;
+}
+
+/* line 625, assets/sass/_genesis.scss */
+.archive-description,
+.author-box {
+  background-color: #fff;
+  margin-bottom: 40px;
+  margin-bottom: 4rem;
+}
+
+/* line 631, assets/sass/_genesis.scss */
+.archive-description {
+  padding: 40px 40px 24px;
+  padding: 4rem 4rem 2.4rem;
+}
+
+/* line 636, assets/sass/_genesis.scss */
+.author-box {
+  padding: 40px;
+  padding: 4rem;
+}
+
+/* line 641, assets/sass/_genesis.scss */
+.author-box-title {
+  color: #333;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+  margin-bottom: 4px;
+  margin-bottom: 0.4rem;
+}
+
+/* line 650, assets/sass/_genesis.scss */
+.author-box a {
+  border-bottom: 1px solid #ddd;
+}
+
+/* line 654, assets/sass/_genesis.scss */
+.author-box p {
+  margin-bottom: 0;
+}
+
+/* line 658, assets/sass/_genesis.scss */
+.author-box .avatar {
+  margin-right: 24px;
+  margin-right: 2.4rem;
+}
+
+/* Titles
+--------------------------------------------- */
+/* line 666, assets/sass/_genesis.scss */
+.entry-title {
+  font-size: 36px;
+  font-size: 3.6rem;
+  line-height: 1;
+}
+
+/* line 673, assets/sass/_genesis.scss */
+.entry-title a,
+.sidebar .widget-title a {
+  color: #333;
+}
+
+/* line 677, assets/sass/_genesis.scss */
+.entry-title a:hover {
+  color: #666;
+}
+
+/* line 681, assets/sass/_genesis.scss */
+.widget-title {
+  font-size: 16px;
+  font-size: 1.6rem;
+  margin-bottom: 24px;
+  margin-bottom: 2.4rem;
+  text-transform: uppercase;
+}
+
+/* line 689, assets/sass/_genesis.scss */
+.sidebar .widget-title a {
+  border: none;
+}
+
+/* line 693, assets/sass/_genesis.scss */
+.archive-title {
+  font-size: 20px;
+  font-size: 2rem;
+  margin-bottom: 24px;
+  margin-bottom: 2.4rem;
+}
+
+/*
+Widgets
+---------------------------------------------------------------------------------------------------- */
+/* Featured Content
+--------------------------------------------- */
+/* line 708, assets/sass/_genesis.scss */
+.featured-content .entry {
+  border-bottom: 2px solid #f5f5f5;
+  margin-bottom: 20px;
+  margin-bottom: 2rem;
+  padding: 0 0 24px;
+  padding: 0 0 2.4rem;
+}
+
+/* line 716, assets/sass/_genesis.scss */
+.featured-content .entry-title {
+  border: none;
+  font-size: 24px;
+  font-size: 2.4rem;
+  line-height: 1.2;
+}
+
+/* line 723, assets/sass/_genesis.scss */
+.featured-content .entry-title a {
+  border: none;
+}
+
+/*
+Plugins
+---------------------------------------------------------------------------------------------------- */
+/* Genesis eNews Extended
+--------------------------------------------- */
+/* line 735, assets/sass/_genesis.scss */
+.enews-widget {
+  color: #999;
+}
+
+/* line 739, assets/sass/_genesis.scss */
+.enews-widget .widget-title {
+  color: #fff;
+}
+
+/* line 743, assets/sass/_genesis.scss */
+.enews-widget input {
+  margin-bottom: 16px;
+  margin-bottom: 1.6rem;
+}
+
+/* line 748, assets/sass/_genesis.scss */
+.enews-widget input:focus {
+  border: 1px solid #ddd;
+}
+
+/* line 752, assets/sass/_genesis.scss */
+.enews-widget input[type="submit"] {
+  background-color: #f15123;
+  color: #fff;
+  margin: 0;
+  width: 100%;
+}
+
+/* line 759, assets/sass/_genesis.scss */
+.enews-widget input:hover[type="submit"] {
+  background-color: #fff;
+  color: #333;
+}
+
+/* Genesis Latest Tweets
+--------------------------------------------- */
+/* line 767, assets/sass/_genesis.scss */
+.latest-tweets ul li {
+  margin-bottom: 16px;
+  margin-bottom: 1.6rem;
+}
+
+/* Gravity Forms
+--------------------------------------------- */
+/* line 778, assets/sass/_genesis.scss */
+div.gform_wrapper input[type="email"],
+div.gform_wrapper input[type="text"],
+div.gform_wrapper textarea,
+div.gform_wrapper .ginput_complex label {
+  font-size: 16px;
+  font-size: 1.6rem;
+  padding: 16px;
+  padding: 1.6rem;
+}
+
+/* line 785, assets/sass/_genesis.scss */
+div.gform_wrapper .ginput_complex label {
+  padding: 0;
+}
+
+/* line 790, assets/sass/_genesis.scss */
+div.gform_wrapper li,
+div.gform_wrapper form li {
+  margin: 16px 0 0;
+  margin: 1.6rem 0 0;
+}
+
+/* line 795, assets/sass/_genesis.scss */
+div.gform_wrapper .gform_footer input[type="submit"] {
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+
+/* Jetpack
+--------------------------------------------- */
+/* line 803, assets/sass/_genesis.scss */
+img#wpstats {
+  display: none;
+}
+
+/*
+Site Header
+---------------------------------------------------------------------------------------------------- */
+/* line 812, assets/sass/_genesis.scss */
+.site-header {
+  background-color: #fff;
+}
+
+/* line 816, assets/sass/_genesis.scss */
+.site-header .wrap {
+  padding: 40px 0;
+  padding: 4rem 0;
+}
+
+/* Title Area
+--------------------------------------------- */
+/* line 824, assets/sass/_genesis.scss */
+.title-area {
+  float: left;
+  font-family: Lato, sans-serif;
+  font-weight: 700;
+  padding: 16px 0;
+  padding: 1.6rem 0;
+  width: 320px;
+}
+
+/* line 833, assets/sass/_genesis.scss */
+.header-image .title-area {
+  padding: 0;
+}
+
+/* line 837, assets/sass/_genesis.scss */
+.site-title {
+  font-size: 28px;
+  font-size: 2.8rem;
+  line-height: 1;
+  margin: 0 0 8px;
+  margin: 0 0 0.8rem;
+  text-transform: uppercase;
+}
+
+/* line 847, assets/sass/_genesis.scss */
+.site-title a,
+.site-title a:hover {
+  color: #333;
+}
+
+/* line 851, assets/sass/_genesis.scss */
+.site-description {
+  color: #999;
+  font-size: 16px;
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 1;
+  margin-bottom: 0;
+}
+
+/* Full width header, no widgets */
+/* line 863, assets/sass/_genesis.scss */
+.header-full-width .title-area,
+.header-full-width .site-title {
+  width: 100%;
+}
+
+/* line 868, assets/sass/_genesis.scss */
+.header-image .site-description,
+.header-image .site-title a {
+  display: block;
+  text-indent: -9999px;
+}
+
+/* Logo, hide text */
+/* line 875, assets/sass/_genesis.scss */
+.header-image .site-header .wrap {
+  background: url(images/logo.png) no-repeat left;
+  padding: 0;
+}
+
+/* line 880, assets/sass/_genesis.scss */
+.header-image .site-title a {
+  float: left;
+  min-height: 164px;
+  width: 100%;
+}
+
+/* Widget Area
+--------------------------------------------- */
+/* line 889, assets/sass/_genesis.scss */
+.site-header .widget-area {
+  float: right;
+  text-align: right;
+  width: 800px;
+}
+
+/* line 895, assets/sass/_genesis.scss */
+.header-image .site-header .widget-area {
+  padding: 40px 0;
+  padding: 4rem 0;
+}
+
+/* line 900, assets/sass/_genesis.scss */
+.site-header .search-form {
+  float: right;
+  margin-top: 24px;
+  margin-top: 2.4rem;
+}
+
+/*
+Site Navigation
+---------------------------------------------------------------------------------------------------- */
+/* line 911, assets/sass/_genesis.scss */
+.genesis-nav-menu {
+  clear: both;
+  color: #999;
+  font-family: Lato, sans-serif;
+  line-height: 1.5;
+  width: 100%;
+}
+
+/* line 919, assets/sass/_genesis.scss */
+.genesis-nav-menu .menu-item {
+  display: inline-block;
+  text-align: left;
+}
+
+/* line 924, assets/sass/_genesis.scss */
+.genesis-nav-menu a {
+  border: none;
+  color: #999;
+  display: block;
+  padding: 28px 24px;
+  padding: 2.8rem 2.4rem;
+  position: relative;
+}
+
+/* line 935, assets/sass/_genesis.scss */
+.genesis-nav-menu a:hover,
+.genesis-nav-menu .current-menu-item > a,
+.genesis-nav-menu .sub-menu .current-menu-item > a:hover {
+  color: #333;
+}
+
+/* line 939, assets/sass/_genesis.scss */
+.genesis-nav-menu .sub-menu .current-menu-item > a {
+  color: #999;
+}
+
+/* line 943, assets/sass/_genesis.scss */
+.genesis-nav-menu > .menu-item > a {
+  text-transform: uppercase;
+}
+
+/* line 947, assets/sass/_genesis.scss */
+.genesis-nav-menu .sub-menu {
+  left: -9999px;
+  opacity: 0;
+  position: absolute;
+  -webkit-transition: opacity .4s ease-in-out;
+  -moz-transition: opacity .4s ease-in-out;
+  -ms-transition: opacity .4s ease-in-out;
+  -o-transition: opacity .4s ease-in-out;
+  transition: opacity .4s ease-in-out;
+  width: 200px;
+  z-index: 99;
+}
+
+/* line 960, assets/sass/_genesis.scss */
+.genesis-nav-menu .sub-menu a {
+  background-color: #fff;
+  border: 1px solid #eee;
+  border-top: none;
+  font-size: 14px;
+  font-size: 1.4rem;
+  padding: 16px 20px;
+  padding: 1.6rem 2rem;
+  position: relative;
+  width: 200px;
+}
+
+/* line 972, assets/sass/_genesis.scss */
+.genesis-nav-menu .sub-menu .sub-menu {
+  margin: -54px 0 0 199px;
+}
+
+/* line 976, assets/sass/_genesis.scss */
+.genesis-nav-menu .menu-item:hover {
+  position: static;
+}
+
+/* line 980, assets/sass/_genesis.scss */
+.genesis-nav-menu .menu-item:hover > .sub-menu {
+  left: auto;
+  opacity: 1;
+}
+
+/* line 985, assets/sass/_genesis.scss */
+.genesis-nav-menu > .first > a {
+  padding-left: 0;
+}
+
+/* line 989, assets/sass/_genesis.scss */
+.genesis-nav-menu > .last > a {
+  padding-right: 0;
+}
+
+/* line 993, assets/sass/_genesis.scss */
+.genesis-nav-menu > .right {
+  display: inline-block;
+  float: right;
+  list-style-type: none;
+  padding: 28px 0;
+  padding: 2.8rem 0;
+  text-transform: uppercase;
+}
+
+/* line 1002, assets/sass/_genesis.scss */
+.genesis-nav-menu > .right > a {
+  display: inline;
+  padding: 0;
+}
+
+/* line 1007, assets/sass/_genesis.scss */
+.genesis-nav-menu > .rss > a {
+  margin-left: 48px;
+  margin-left: 4.8rem;
+}
+
+/* line 1012, assets/sass/_genesis.scss */
+.genesis-nav-menu > .search {
+  padding: 14px 0 0;
+  padding: 1.4rem 0 0;
+}
+
+/* Site Header Navigation
+--------------------------------------------- */
+/* line 1020, assets/sass/_genesis.scss */
+.site-header .sub-menu {
+  border-top: 1px solid #eee;
+}
+
+/* line 1024, assets/sass/_genesis.scss */
+.site-header .sub-menu .sub-menu {
+  margin-top: -55px;
+}
+
+/* Primary Navigation
+--------------------------------------------- */
+/* line 1031, assets/sass/_genesis.scss */
+.nav-primary {
+  background-color: #333;
+}
+
+/* line 1036, assets/sass/_genesis.scss */
+.nav-primary a:hover,
+.nav-primary .current-menu-item > a {
+  color: #fff;
+}
+
+/* line 1040, assets/sass/_genesis.scss */
+.nav-primary .sub-menu a:hover {
+  color: #333;
+}
+
+/* Secondary Navigation
+--------------------------------------------- */
+/* line 1047, assets/sass/_genesis.scss */
+.nav-secondary {
+  background-color: #fff;
+}
+
+/*
+Content Area
+---------------------------------------------------------------------------------------------------- */
+/* Entries
+--------------------------------------------- */
+/* line 1059, assets/sass/_genesis.scss */
+.entry {
+  background-color: #fff;
+  border-radius: 3px;
+  margin-bottom: 40px;
+  margin-bottom: 4rem;
+  padding: 40px 40px 24px;
+  padding: 4rem 4rem 2.4rem;
+}
+
+/* line 1068, assets/sass/_genesis.scss */
+.entry-content a {
+  border-bottom: 1px solid #ddd;
+  color: #f15123;
+}
+
+/* line 1073, assets/sass/_genesis.scss */
+.entry-content a:hover {
+  color: #333;
+}
+
+/* line 1078, assets/sass/_genesis.scss */
+.entry-content .attachment a,
+.entry-content .gallery a {
+  border: none;
+}
+
+/* line 1085, assets/sass/_genesis.scss */
+.entry-content ol,
+.entry-content p,
+.entry-content ul,
+.quote-caption {
+  margin-bottom: 26px;
+  margin-bottom: 2.6rem;
+}
+
+/* line 1091, assets/sass/_genesis.scss */
+.entry-content ol,
+.entry-content ul {
+  margin-left: 40px;
+  margin-left: 4rem;
+}
+
+/* line 1096, assets/sass/_genesis.scss */
+.entry-content ol li {
+  list-style-type: decimal;
+}
+
+/* line 1100, assets/sass/_genesis.scss */
+.entry-content ul li {
+  list-style-type: disc;
+}
+
+/* line 1105, assets/sass/_genesis.scss */
+.entry-content ol ol,
+.entry-content ul ul {
+  margin-bottom: 0;
+}
+
+/* line 1109, assets/sass/_genesis.scss */
+.entry-content .search-form {
+  width: 50%;
+}
+
+/* line 1113, assets/sass/_genesis.scss */
+.entry-meta {
+  color: #999;
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+
+/* line 1119, assets/sass/_genesis.scss */
+.entry-meta a {
+  border-bottom: 1px solid #ddd;
+}
+
+/* line 1123, assets/sass/_genesis.scss */
+.entry-header .entry-meta {
+  margin-bottom: 24px;
+  margin-bottom: 2.4rem;
+}
+
+/* line 1128, assets/sass/_genesis.scss */
+.entry-footer .entry-meta {
+  border-top: 2px solid #f5f5f5;
+  margin: 0 -40px;
+  margin: 0 -4rem;
+  padding: 32px 40px 8px;
+  padding: 3.2rem 4rem 0.8rem;
+}
+
+/* line 1136, assets/sass/_genesis.scss */
+.entry-comments-link::before {
+  content: "\2014";
+  margin: 0 6px 0 2px;
+  margin: 0 0.6rem 0 0.2rem;
+}
+
+/* line 1143, assets/sass/_genesis.scss */
+.entry-categories,
+.entry-tags {
+  display: block;
+}
+
+/* Pagination
+--------------------------------------------- */
+/* line 1151, assets/sass/_genesis.scss */
+.archive-pagination,
+.entry-pagination {
+  font-size: 14px;
+  font-size: 1.4rem;
+  margin: 40px 0;
+  margin: 4rem 0;
+}
+
+/* line 1158, assets/sass/_genesis.scss */
+.archive-pagination li {
+  display: inline;
+}
+
+/* line 1162, assets/sass/_genesis.scss */
+.archive-pagination li a {
+  background-color: #333;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  padding: 8px 12px;
+  padding: 0.8rem 1.2rem;
+}
+
+/* line 1173, assets/sass/_genesis.scss */
+.archive-pagination li a:hover,
+.archive-pagination li.active a {
+  background-color: #f15123;
+}
+
+/* line 1177, assets/sass/_genesis.scss */
+.entry-pagination a {
+  border-bottom: 1px solid #ddd;
+}
+
+/* Comments
+--------------------------------------------- */
+/* line 1186, assets/sass/_genesis.scss */
+.comment-respond,
+.entry-comments,
+.entry-pings {
+  background-color: #fff;
+  margin-bottom: 40px;
+  margin-bottom: 4rem;
+}
+
+/* line 1192, assets/sass/_genesis.scss */
+.entry-comments {
+  padding: 40px;
+  padding: 4rem;
+}
+
+/* line 1198, assets/sass/_genesis.scss */
+.comment-respond,
+.entry-pings {
+  padding: 40px 40px 16px;
+  padding: 4rem 4rem 1.6rem;
+}
+
+/* line 1204, assets/sass/_genesis.scss */
+.comment-respond a,
+.entry-comments a {
+  border-bottom: 1px solid #ddd;
+}
+
+/* line 1208, assets/sass/_genesis.scss */
+.comment-content {
+  clear: both;
+}
+
+/* line 1212, assets/sass/_genesis.scss */
+.entry-comments .comment-author {
+  margin-bottom: 0;
+}
+
+/* line 1218, assets/sass/_genesis.scss */
+.comment-respond input[type="email"],
+.comment-respond input[type="text"],
+.comment-respond input[type="url"] {
+  width: 50%;
+}
+
+/* line 1222, assets/sass/_genesis.scss */
+.comment-respond label {
+  display: block;
+  margin-right: 12px;
+  margin-right: 1.2rem;
+}
+
+/* line 1229, assets/sass/_genesis.scss */
+.comment-list li,
+.ping-list li {
+  list-style-type: none;
+}
+
+/* line 1233, assets/sass/_genesis.scss */
+.comment-list li {
+  margin-top: 24px;
+  margin-top: 2.4rem;
+  padding: 32px;
+  padding: 3.2rem;
+}
+
+/* line 1240, assets/sass/_genesis.scss */
+.comment-list li li {
+  margin-right: -32px;
+  margin-right: -3.2rem;
+}
+
+/* line 1245, assets/sass/_genesis.scss */
+li.comment {
+  background-color: #f5f5f5;
+  border: 2px solid #fff;
+  border-right: none;
+}
+
+/* line 1251, assets/sass/_genesis.scss */
+.comment .avatar {
+  margin: 0 16px 24px 0;
+  margin: 0 1.6rem 2.4rem 0;
+}
+
+/* line 1256, assets/sass/_genesis.scss */
+.entry-pings .reply {
+  display: none;
+}
+
+/* line 1263, assets/sass/_genesis.scss */
+.form-allowed-tags {
+  background-color: #f5f5f5;
+  font-size: 14px;
+  font-size: 1.4rem;
+  padding: 24px;
+  padding: 2.4rem;
+}
+
+/*
+Sidebars
+---------------------------------------------------------------------------------------------------- */
+/* line 1276, assets/sass/_genesis.scss */
+.sidebar {
+  color: #999;
+}
+
+/* line 1280, assets/sass/_genesis.scss */
+.sidebar a {
+  border-bottom: 1px solid #ddd;
+}
+
+/* line 1284, assets/sass/_genesis.scss */
+.sidebar p:last-child {
+  margin-bottom: 0;
+}
+
+/* line 1288, assets/sass/_genesis.scss */
+.sidebar li {
+  list-style-type: none;
+  margin-bottom: 6px;
+  margin-bottom: 0.6rem;
+  word-wrap: break-word;
+}
+
+/* line 1295, assets/sass/_genesis.scss */
+.sidebar ul > li:last-child {
+  margin-bottom: 0;
+}
+
+/* line 1299, assets/sass/_genesis.scss */
+.sidebar .widget {
+  background-color: #fff;
+  border-radius: 3px;
+  margin-bottom: 40px;
+  margin-bottom: 4rem;
+  padding: 40px;
+  padding: 4rem;
+}
+
+/* line 1308, assets/sass/_genesis.scss */
+.sidebar .enews-widget {
+  background-color: #333;
+}
+
+/*
+Footer Widgets
+---------------------------------------------------------------------------------------------------- */
+/* line 1317, assets/sass/_genesis.scss */
+.footer-widgets {
+  background-color: #333;
+  color: #999;
+  clear: both;
+  padding: 40px 0 16px;
+  padding: 4rem 0 1.6rem;
+}
+
+/* line 1326, assets/sass/_genesis.scss */
+.footer-widgets-1,
+.footer-widgets-3 {
+  width: 350px;
+}
+
+/* line 1330, assets/sass/_genesis.scss */
+.footer-widgets-2 {
+  width: 360px;
+}
+
+/* line 1334, assets/sass/_genesis.scss */
+.footer-widgets-1 {
+  margin-right: 40px;
+  margin-right: 4rem;
+}
+
+/* line 1340, assets/sass/_genesis.scss */
+.footer-widgets-1,
+.footer-widgets-2 {
+  float: left;
+}
+
+/* line 1344, assets/sass/_genesis.scss */
+.footer-widgets-3 {
+  float: right;
+}
+
+/* line 1348, assets/sass/_genesis.scss */
+.footer-widgets a {
+  border-bottom: 1px solid #666;
+  color: #999;
+}
+
+/* line 1353, assets/sass/_genesis.scss */
+.footer-widgets a:hover {
+  color: #ddd;
+}
+
+/* line 1357, assets/sass/_genesis.scss */
+.footer-widgets .widget {
+  margin-bottom: 24px;
+  margin-bottom: 2.4rem;
+}
+
+/* line 1362, assets/sass/_genesis.scss */
+.footer-widgets .widget-title {
+  color: #fff;
+}
+
+/* line 1366, assets/sass/_genesis.scss */
+.footer-widgets li {
+  list-style-type: none;
+  margin-bottom: 6px;
+  margin-bottom: 0.6rem;
+  word-wrap: break-word;
+}
+
+/* line 1373, assets/sass/_genesis.scss */
+.footer-widgets .search-form input:focus {
+  border: 1px solid #ddd;
+}
+
+/*
+Site Footer
+---------------------------------------------------------------------------------------------------- */
+/* line 1382, assets/sass/_genesis.scss */
+.site-footer {
+  background-color: #fff;
+  color: #999;
+  font-size: 14px;
+  font-size: 1.4rem;
+  padding: 40px 0;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+/* line 1392, assets/sass/_genesis.scss */
+.site-footer a {
+  border-bottom: 1px solid #ddd;
+}
+
+/* line 1396, assets/sass/_genesis.scss */
+.site-footer p {
+  margin-bottom: 0;
+}
+
+/*
+Media Queries
+---------------------------------------------------------------------------------------------------- */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min-device-pixel-ratio: 1.5) {
+  /* line 1410, assets/sass/_genesis.scss */
+  .header-image .site-header .wrap {
+    background: url(images/logo@2x.png) no-repeat left;
+    background-size: 320px 164px;
+  }
+}
+@media only screen and (max-width: 1139px) {
+  /* line 1420, assets/sass/_genesis.scss */
+  .site-inner,
+  .wrap {
+    max-width: 960px;
+  }
+
+  /* line 1426, assets/sass/_genesis.scss */
+  .content-sidebar-sidebar .content-sidebar-wrap,
+  .sidebar-content-sidebar .content-sidebar-wrap,
+  .sidebar-sidebar-content .content-sidebar-wrap {
+    width: 740px;
+  }
+
+  /* line 1431, assets/sass/_genesis.scss */
+  .content,
+  .site-header .widget-area {
+    width: 620px;
+  }
+
+  /* line 1437, assets/sass/_genesis.scss */
+  .sidebar-content-sidebar .content,
+  .sidebar-sidebar-content .content,
+  .content-sidebar-sidebar .content {
+    width: 400px;
+  }
+
+  /* line 1445, assets/sass/_genesis.scss */
+  .footer-widgets-1,
+  .footer-widgets-2,
+  .footer-widgets-3,
+  .sidebar-primary,
+  .title-area {
+    width: 300px;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  /* line 1453, assets/sass/_genesis.scss */
+  body {
+    background-color: #fff;
+  }
+
+  /* line 1472, assets/sass/_genesis.scss */
+  .content,
+  .content-sidebar-sidebar .content,
+  .content-sidebar-sidebar .content-sidebar-wrap,
+  .footer-widgets-1,
+  .footer-widgets-2,
+  .footer-widgets-3,
+  .sidebar-content-sidebar .content,
+  .sidebar-content-sidebar .content-sidebar-wrap,
+  .sidebar-primary,
+  .sidebar-secondary,
+  .sidebar-sidebar-content .content,
+  .sidebar-sidebar-content .content-sidebar-wrap,
+  .site-header .widget-area,
+  .site-inner,
+  .title-area,
+  .wrap {
+    width: 100%;
+  }
+
+  /* line 1476, assets/sass/_genesis.scss */
+  .site-header .wrap {
+    padding: 20px 0;
+    padding: 2rem 0;
+  }
+
+  /* line 1481, assets/sass/_genesis.scss */
+  .header-image .site-header .wrap {
+    background-position: center top;
+  }
+
+  /* line 1485, assets/sass/_genesis.scss */
+  .site-inner {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  /* line 1498, assets/sass/_genesis.scss */
+  .archive-description,
+  .author-box,
+  .comment-respond,
+  .entry,
+  .entry-comments,
+  .entry-footer .entry-meta,
+  .header-image .site-header .widget-area,
+  .sidebar .widget,
+  .site-header {
+    padding: 0;
+  }
+
+  /* line 1504, assets/sass/_genesis.scss */
+  .genesis-nav-menu li,
+  .site-header ul.genesis-nav-menu,
+  .site-header .search-form {
+    float: none;
+  }
+
+  /* line 1512, assets/sass/_genesis.scss */
+  .genesis-nav-menu,
+  .site-description,
+  .site-header .title-area,
+  .site-header .search-form,
+  .site-title {
+    text-align: center;
+  }
+
+  /* line 1518, assets/sass/_genesis.scss */
+  .genesis-nav-menu a,
+  .genesis-nav-menu > .first > a,
+  .genesis-nav-menu > .last > a {
+    padding: 20px 16px;
+    padding: 2rem 1.6rem;
+  }
+
+  /* line 1523, assets/sass/_genesis.scss */
+  .site-header .search-form {
+    margin: 16px auto;
+    margin: 1.6rem auto;
+  }
+
+  /* line 1528, assets/sass/_genesis.scss */
+  .genesis-nav-menu li.right {
+    display: none;
+  }
+
+  /* line 1532, assets/sass/_genesis.scss */
+  .entry-footer .entry-meta {
+    margin: 0;
+    padding-top: 12px;
+    padding-top: 1.2rem;
+  }
+
+  /* line 1538, assets/sass/_genesis.scss */
+  .sidebar .widget.enews-widget {
+    padding: 40px;
+    padding: 4rem;
+  }
+
+  /* line 1543, assets/sass/_genesis.scss */
+  .site-footer {
+    padding: 24px 0;
+    padding: 2.4rem 0;
+  }
+
+  /* line 1548, assets/sass/_genesis.scss */
+  .footer-widgets {
+    padding: 40px 5% 16px;
+  }
+
+  /* line 1552, assets/sass/_genesis.scss */
+  .footer-widgets-1 {
+    margin: 0;
+  }
+}
+@media only screen and (max-width: 767px) {
+  /* line 1570, assets/sass/_genesis.scss */
+  .five-sixths,
+  .four-sixths,
+  .one-fourth,
+  .one-half,
+  .one-sixth,
+  .one-third,
+  .three-fourths,
+  .three-sixths,
+  .two-fourths,
+  .two-sixths,
+  .two-thirds {
+    margin: 0;
+    width: 100%;
+  }
+}
