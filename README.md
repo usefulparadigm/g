@@ -1,4 +1,4 @@
-Gene: A Genesis Starter Child Theme (based on ZURB Foundation)
+g: a Genesis starter child theme (based on ZURB Foundation)
 =====
 
 Usage
