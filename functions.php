@@ -41,3 +41,72 @@ function gene_init_foundation() {
   echo '<script>jQuery(document).foundation();</script>';
 }
 add_action( 'wp_footer', 'gene_init_foundation' );
+
+
+// layout
+
+// Force layout to be full width
+// add_filter( 'genesis_pre_get_option_site_layout', '__genesis_return_full_width_content' );
+
+remove_action( 'genesis_site_title', 'genesis_seo_site_title' );
+add_action( 'genesis_site_title', 'g_genesis_ugly_site_title' );
+function g_genesis_ugly_site_title() {
+  echo 'Ugly!';
+}
+
+add_action( 'genesis_header', 'g_nav_menu' );
+function g_nav_menu() { 
+?>
+<nav class="top-bar">
+  <ul class="title-area">
+    <li class="name"><!-- Leave this empty --></li>
+  </ul>
+  <section class="top-bar-section">
+    <?php wp_nav_menu( array( 'menu' => 'Primary' ) ); ?>
+  </section>    
+</nav>
+<?php 
+}
+
+add_action( 'genesis_sidebar', 'gene_side_bar' );
+function gene_side_bar() {
+  echo '<h1>SIDEBAR</h1>';
+}
+
+add_action( 'genesis_before_content', 'gene_before_content' );
+function gene_before_content() {
+  echo '<h2>Before Content</h2>';
+}
+
+
+add_filter( 'body_class', 'gene_layout_body_classes' );
+function gene_layout_body_classes( array $classes ) {
+	$classes[] = 'row';
+	return $classes;
+}
+
+
+//* Add support for structural wraps
+add_theme_support( 'genesis-structural-wraps', array(
+	'header',
+	'nav',
+	'subnav',
+	'site-inner',
+	'footer-widgets',
+	'footer'
+) );
+
+
+?>
+<!-- <h1>HERE:</h1>
+<pre>
+<?php
+  // genesis_structural_wrap( 'site-inner' );  
+  $output = genesis_markup( array(
+      'html5'   => '<div %s>',
+      'xhtml'   => '<div id="inner">',
+      'context' => 'site-inner',
+    ) );
+  echo htmlentities($output);
+?>
+</pre> -->
