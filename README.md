@@ -1,8 +1,7 @@
 g 
 =====
+<img src="screenshot.png" alt="g" width="300" style="float: right;" />
 A Genesis starter child theme (based on ZURB Foundation)
-
-![g](screenshot.png)
 
 Usage
 -----
