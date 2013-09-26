@@ -1,7 +1,9 @@
-<img src="screenshot.png" alt="g" width="300" style="float: right;" />
 g 
 =====
 A Genesis starter child theme (based on ZURB Foundation)
+
+<img src="screenshot.png" alt="g" width="300" />
+
 
 Usage
 -----

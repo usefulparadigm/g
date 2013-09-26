@@ -1,5 +1,5 @@
 /*
-	Theme Name: gene
+	Theme Name: g
 	Theme URI: http://www.yourdomain.com/
 	Description: This is a sample child theme created for the Genesis Framework.
 	Author: Your Business Name
@@ -15,7 +15,7 @@
 	License: GNU General Public License v2.0
 	License URI: http://www.opensource.org/licenses/gpl-license.php
 */
-/*! normalize.css v2.1.2 | MIT License | git.io/normalize */
+/* normalize.css v2.1.2 | MIT License | git.io/normalize */
 /* ==========================================================================
    HTML5 display definitions
    ========================================================================== */
@@ -7320,134 +7320,381 @@ a.th {
   max-width: 800px;
 }
 
-/* line 24, assets/sass/style.scss */
-.menu {
-  display: block;
-  width: auto;
-  overflow: hidden;
-  margin: -0.25em 0 1.125em;
-  padding-top: 0.25em;
-  margin-right: 0;
-  margin-left: -0.5625em;
-}
-/* line 42, assets/sass/foundation/components/_sub-nav.scss */
-.menu dt,
-.menu dd,
-.menu li {
-  float: left;
-  display: inline;
-  margin-left: 0.5625em;
-  margin-bottom: 0.625em;
-  font-weight: normal;
-  font-size: 0.875em;
-}
-/* line 50, assets/sass/foundation/components/_sub-nav.scss */
-.menu dt a,
-.menu dd a,
-.menu li a {
-  color: #999999;
-  text-decoration: none;
-}
-/* line 54, assets/sass/foundation/components/_sub-nav.scss */
-.menu dt.active a,
-.menu dd.active a,
-.menu li.active a {
-  -webkit-border-radius: 1000px;
-  border-radius: 1000px;
-  font-weight: bold;
-  background: #2ba6cb;
-  padding: 0.1875em 0.5625em;
-  cursor: default;
-  color: white;
+/*
+  Styles from Genesis sample theme
+*/
+/* Table of Contents
+
+	- HTML5 Reset
+		- Baseline Normalize
+		- Box Sizing
+		- Float Clearing
+	- Defaults
+		- Typographical Elements
+		- Headings
+		- Objects
+		- Forms
+		- Tables
+	- Structure and Layout
+		- Site Containers
+		- Column Widths and Positions
+		- Column Classes
+	- Common Classes
+		- WordPress
+		- Genesis
+		- Titles
+	- Widgets
+		- Featured Content
+	- Plugins
+		- Genesis eNews Extended
+		- Genesis Latest Tweets
+		- Gravity Forms
+		- Jetpack
+	- Site Header
+		- Title Area
+		- Widget Area
+	- Site Navigation
+		- Header Navigation
+		- Primary Navigation
+		- Secondary Navigation
+	- Content Area
+		- Entries
+		- Pagination
+		- Comments
+	- Sidebars
+	- Footer Widgets
+	- Site Footer
+	- Media Queries
+		- max-width: 1139px
+		- max-width: 1023px
+		- max-width: 767px
+
+*/
+/*
+HTML5 Reset
+---------------------------------------------------------------------------------------------------- */
+/* Box Sizing
+--------------------------------------------- */
+/* Float Clearing
+--------------------------------------------- */
+/* line 80, assets/sass/_style.foundation.scss */
+.archive-pagination:before,
+.clearfix:before,
+.entry:before,
+.entry-pagination:before,
+.footer-widgets:before,
+.nav-primary:before,
+.nav-secondary:before,
+.site-container:before,
+.site-footer:before,
+.site-header:before,
+.site-inner:before,
+.wrap:before {
+  content: " ";
+  display: table;
 }
 
+/* line 96, assets/sass/_style.foundation.scss */
+.archive-pagination:after,
+.clearfix:after,
+.entry:after,
+.entry-pagination:after,
+.footer-widgets:after,
+.nav-primary:after,
+.nav-secondary:after,
+.site-container:after,
+.site-footer:after,
+.site-header:after,
+.site-inner:after,
+.wrap:after {
+  clear: both;
+  content: " ";
+  display: table;
+}
+
+/*
+Defaults
+---------------------------------------------------------------------------------------------------- */
+/* Typographical Elements
+--------------------------------------------- */
+/* Headings
+--------------------------------------------- */
+/* Objects
+--------------------------------------------- */
+/* Forms
+--------------------------------------------- */
+/* Tables
+--------------------------------------------- */
 /*
 Structure and Layout
 ---------------------------------------------------------------------------------------------------- */
 /* Site Containers
 --------------------------------------------- */
-/* line 36, assets/sass/style.scss */
-.site-inner,
-.wrap {
-  margin: 0 auto;
-  max-width: 1140px;
+/* line 127, assets/sass/_style.foundation.scss */
+.site-container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 62.5em;
+  *zoom: 1;
 }
-
-/* line 41, assets/sass/style.scss */
-.site-inner {
+/* line 121, assets/sass/foundation/components/_global.scss */
+.site-container:before, .site-container:after {
+  content: " ";
+  display: table;
+}
+/* line 122, assets/sass/foundation/components/_global.scss */
+.site-container:after {
   clear: both;
-  padding-top: 40px;
-  padding-top: 4rem;
+}
+/* line 130, assets/sass/_style.foundation.scss */
+.site-container .site-header .title-area {
+  position: relative;
+  padding-left: 0.9375em;
+  padding-right: 0.9375em;
+  width: 66.66667%;
+  float: left;
+}
+/* line 131, assets/sass/_style.foundation.scss */
+.site-container .site-header .header-widget-area {
+  position: relative;
+  padding-left: 0.9375em;
+  padding-right: 0.9375em;
+  width: 33.33333%;
+  float: left;
+}
+/* line 133, assets/sass/_style.foundation.scss */
+.site-container .site-header .header-widget-area .widget {
+  float: right;
+}
+/* line 138, assets/sass/_style.foundation.scss */
+.site-container .site-inner {
+  padding-top: 20px;
+  padding-top: 2rem;
+}
+/* line 142, assets/sass/_style.foundation.scss */
+.site-container .site-inner .content-sidebar-wrap {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 62.5em;
+  *zoom: 1;
+}
+/* line 121, assets/sass/foundation/components/_global.scss */
+.site-container .site-inner .content-sidebar-wrap:before, .site-container .site-inner .content-sidebar-wrap:after {
+  content: " ";
+  display: table;
+}
+/* line 122, assets/sass/foundation/components/_global.scss */
+.site-container .site-inner .content-sidebar-wrap:after {
+  clear: both;
+}
+/* line 144, assets/sass/_style.foundation.scss */
+.site-container .site-inner .content-sidebar-wrap .content {
+  position: relative;
+  padding-left: 0.9375em;
+  padding-right: 0.9375em;
+  width: 66.66667%;
+  float: left;
+}
+/* line 151, assets/sass/_style.foundation.scss */
+.site-container .site-inner .sidebar-primary {
+  position: relative;
+  padding-left: 0.9375em;
+  padding-right: 0.9375em;
+  width: 33.33333%;
+  float: left;
 }
 
-/* Column Widths and Positions
+/* Column Classes
+	Link: http://twitter.github.io/bootstrap/assets/css/bootstrap-responsive.css
 --------------------------------------------- */
-/* Wrapping div for .content and .sidebar-primary */
-/* line 54, assets/sass/style.scss */
-.content-sidebar-sidebar .content-sidebar-wrap,
-.sidebar-content-sidebar .content-sidebar-wrap,
-.sidebar-sidebar-content .content-sidebar-wrap {
-  width: 920px;
-}
-
-/* line 58, assets/sass/style.scss */
-.content-sidebar-sidebar .content-sidebar-wrap {
+/* line 181, assets/sass/_style.foundation.scss */
+.five-sixths,
+.four-sixths,
+.one-fourth,
+.one-half,
+.one-sixth,
+.one-third,
+.three-fourths,
+.three-sixths,
+.two-fourths,
+.two-sixths,
+.two-thirds {
   float: left;
+  margin-left: 2.564102564102564%;
 }
 
-/* line 63, assets/sass/style.scss */
-.sidebar-content-sidebar .content-sidebar-wrap,
-.sidebar-sidebar-content .content-sidebar-wrap {
-  float: right;
+/* line 188, assets/sass/_style.foundation.scss */
+.one-half,
+.three-sixths,
+.two-fourths {
+  width: 48.717948717948715%;
 }
 
-/* Content */
-/* line 69, assets/sass/style.scss */
-.content {
-  float: right;
-  width: 740px;
+/* line 193, assets/sass/_style.foundation.scss */
+.one-third,
+.two-sixths {
+  width: 31.623931623931625%;
 }
 
-/* line 76, assets/sass/style.scss */
-.content-sidebar .content,
-.content-sidebar-sidebar .content,
-.sidebar-content-sidebar .content {
-  float: left;
+/* line 198, assets/sass/_style.foundation.scss */
+.four-sixths,
+.two-thirds {
+  width: 65.81196581196582%;
 }
 
-/* line 82, assets/sass/style.scss */
-.content-sidebar-sidebar .content,
-.sidebar-content-sidebar .content,
-.sidebar-sidebar-content .content {
-  width: 520px;
+/* line 202, assets/sass/_style.foundation.scss */
+.one-fourth {
+  width: 23.076923076923077%;
 }
 
-/* line 86, assets/sass/style.scss */
-.full-width-content .content {
+/* line 206, assets/sass/_style.foundation.scss */
+.three-fourths {
+  width: 74.35897435897436%;
+}
+
+/* line 210, assets/sass/_style.foundation.scss */
+.one-sixth {
+  width: 14.52991452991453%;
+}
+
+/* line 214, assets/sass/_style.foundation.scss */
+.five-sixths {
+  width: 82.90598290598291%;
+}
+
+/* line 218, assets/sass/_style.foundation.scss */
+.first {
+  clear: both;
+  margin-left: 0;
+}
+
+/*
+Site Header
+---------------------------------------------------------------------------------------------------- */
+/* line 228, assets/sass/_style.foundation.scss */
+.site-header {
+  background-color: #fff;
+}
+
+/* line 232, assets/sass/_style.foundation.scss */
+.site-header .wrap {
+  padding: 40px 0;
+  padding: 4rem 0;
+}
+
+/* Title Area
+--------------------------------------------- */
+/* line 240, assets/sass/_style.foundation.scss */
+.header-image .title-area {
+  padding: 0;
+}
+
+/* line 244, assets/sass/_style.foundation.scss */
+.site-title {
+  font-size: 28px;
+  font-size: 2.8rem;
+  line-height: 1;
+  margin: 0 0 8px;
+  margin: 0 0 0.8rem;
+  text-transform: uppercase;
+}
+
+/* line 254, assets/sass/_style.foundation.scss */
+.site-title a,
+.site-title a:hover {
+  color: #333;
+}
+
+/* line 258, assets/sass/_style.foundation.scss */
+.site-description {
+  color: #999;
+  font-size: 16px;
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 1;
+  margin-bottom: 0;
+}
+
+/* Full width header, no widgets */
+/* line 270, assets/sass/_style.foundation.scss */
+.header-full-width .title-area,
+.header-full-width .site-title {
   width: 100%;
 }
 
-/* Primary Sidebar */
-/* line 92, assets/sass/style.scss */
-.sidebar-primary {
-  float: right;
-  width: 360px;
+/* line 275, assets/sass/_style.foundation.scss */
+.header-image .site-description,
+.header-image .site-title a {
+  display: block;
+  text-indent: -9999px;
 }
 
-/* line 98, assets/sass/style.scss */
-.sidebar-content .sidebar-primary,
-.sidebar-sidebar-content .sidebar-primary {
+/* Logo, hide text */
+/* line 282, assets/sass/_style.foundation.scss */
+.header-image .site-header .wrap {
+  background: url(images/logo.png) no-repeat left;
+  padding: 0;
+}
+
+/* line 287, assets/sass/_style.foundation.scss */
+.header-image .site-title a {
   float: left;
+  min-height: 164px;
+  width: 100%;
 }
 
-/* Secondary Sidebar */
-/* line 104, assets/sass/style.scss */
-.sidebar-secondary {
-  float: left;
-  width: 180px;
-}
-
-/* line 109, assets/sass/style.scss */
-.content-sidebar-sidebar .sidebar-secondary {
+/* Widget Area
+--------------------------------------------- */
+/* line 296, assets/sass/_style.foundation.scss */
+.site-header .widget-area {
   float: right;
+  text-align: right;
+  width: 800px;
 }
+
+/* line 302, assets/sass/_style.foundation.scss */
+.header-image .site-header .widget-area {
+  padding: 20px 0;
+  padding: 2rem 0;
+}
+
+/* line 307, assets/sass/_style.foundation.scss */
+.site-header .search-form {
+  float: right;
+  margin-top: 24px;
+  margin-top: 2.4rem;
+}
+
+/*
+Site Navigation
+---------------------------------------------------------------------------------------------------- */
+/* Site Header Navigation
+--------------------------------------------- */
+/* Primary Navigation
+--------------------------------------------- */
+/* Secondary Navigation
+--------------------------------------------- */
+/*
+Content Area
+---------------------------------------------------------------------------------------------------- */
+/* Entries
+--------------------------------------------- */
+/* Pagination
+--------------------------------------------- */
+/* Comments
+--------------------------------------------- */
+/*
+Sidebars
+---------------------------------------------------------------------------------------------------- */
+/*
+Footer Widgets
+---------------------------------------------------------------------------------------------------- */
+/*
+Site Footer
+---------------------------------------------------------------------------------------------------- */
