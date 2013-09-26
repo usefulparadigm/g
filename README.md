@@ -1,5 +1,8 @@
-g: a Genesis starter child theme (based on ZURB Foundation)
+g 
 =====
+A Genesis starter child theme (based on ZURB Foundation)
+
+![g](screenshot.png)
 
 Usage
 -----
