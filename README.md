@@ -1,6 +1,6 @@
 g 
 =====
-A Genesis starter child theme (based on ZURB Foundation)
+A Genesis starter child theme for WordPress (based on ZURB Foundation)
 
 <img src="screenshot.png" alt="g" width="300" />
 

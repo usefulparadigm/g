@@ -33,6 +33,9 @@ add_theme_support( 'genesis-responsive-viewport' );
 //* Add support for custom background
 add_theme_support( 'custom-background' );
 
+/** Add support for custom header */
+// add_theme_support( 'genesis-custom-header', array( 'width' => 960, 'height' => 100 ) );
+
 //* Add support for 3-column footer widgets
 add_theme_support( 'genesis-footer-widgets', 3 );
 
@@ -46,6 +49,6 @@ add_theme_support( 'genesis-structural-wraps', array(
   'footer'
 ) );
 
-require_once( CHILD_DIR . '/lib/foundation.php' );
+require_once( CHILD_DIR . '/inc/foundation.php' );
 
 
